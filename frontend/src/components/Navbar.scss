@@ -1,253 +1,7 @@
-// * {
-//     margin: 0;
- 
-// }
-
-
-// .navbar {
-//     padding: 20px 0px;
-//     margin: 0;
-//     display: flex;
-//     height: 60px;
-//     justify-content: space-between;
-//     align-items: center;
-//     background: linear-gradient(to right, #FF4C24, #FF6F50);  // ✅ Gradient Background
-//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-//     transition: all 0.3s ease-in-out;
-//     position: sticky;
-//     top: 0;
-//     z-index: 1000;
-// }
-
-// /* Logo Styling */
-// .navbar .logo {
-//     width: 160px;
-//     height: 100px;
-//     transition: transform 0.3s ease-in-out;
-//     border-radius: 50px;
-// }
-
-// .navbar .logo:hover {
-//     transform: scale(1.05);
-// }
-
-// /* Navbar Menu */
-// .navbar-menu {
-//     display: flex;
-//     list-style: none;
-//     gap: 40px;
-//     color: white;  // ✅ White Text
-//     font-size: 30px;
-//     font-weight: 600;
-// }
-
-// .navbar-menu .active {
-//     padding-bottom: 2px;
-//     border-bottom: none;
-// }
-
-// .navbar li {
-//     cursor: pointer;
-//     transition: color 0.3s;
-//     text-decoration: none;
-// }
-
-// .navbar li:hover {
-//     color: #f9d507;  // ✅ Golden Yellow on Hover
-    
-// }
-
-// /* Right Section */
-// .navbar-right {
-//     display: flex;
-//     align-items: center;
-//     gap: 40px;
-// }
-
-// /* ✅ Search Bar */
-// .navbar-search {
-//     display: flex;
-//     align-items: center;
-//     background: rgba(255, 255, 255, 0.2);  // ✅ Semi-transparent White
-//     padding: 8px 15px;
-//     border-radius: 50px;
-//     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
-//     transition: 0.3s;
-
-//     input {
-//         border: none;
-//         outline: none;
-//         font-size: 16px;
-//         background: transparent;
-//         color: white;  // ✅ White Text
-//         width: 150px;
-//     }
-
-//     input::placeholder {
-//         color: #FFD700;
-//     }
-
-//     img {
-//         width: 20px;
-//         cursor: pointer;
-//     }
-// }
-
-// .navbar-search:hover {
-//     box-shadow: 0 3px 7px rgba(255, 255, 255, 0.4);
-// }
-
-// /* Button Styling */
-// .navbar-right button {
-//     background: white;
-//     font-size: 16px;
-//     color: #FF4C24;  // ✅ Button Text in Orange
-//     border: 2px solid white;
-//     padding: 10px 30px;
-//     border-radius: 50px;
-//     cursor: pointer;
-//     transition: 0.3s;
-//     box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
-// }
-
-// .navbar-right button:hover {
-//     background: #FFD700;  // ✅ Golden Yellow Hover
-//     color: #FF4C24;
-//     box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
-// }
-
-// /* Profile Dropdown */
-// .navbar-profile {
-//     position: relative;
-// }
-
-// .navbar-profile-dropdown {
-//     position: absolute;
-//     display: none;
-//     right: 0;
-//     z-index: 1;
-//     background-color: white;
-//     padding: 12px 25px;
-//     border-radius: 4px;
-//     border: 1px solid #FF4C24;
-//     outline: 2px solid white;
-//     list-style: none;
-//     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-// }
-
-// .navbar-profile-dropdown li {
-//     display: flex;
-//     align-items: center;
-//     gap: 10px;
-//     cursor: pointer;
-//     transition: color 0.3s;
-//     text-decoration: none;
-// }
-
-// .navbar-profile-dropdown img {
-//     width: 20px;
-// }
-
-// .navbar-profile-dropdown li:hover {
-//     color: #ed694b;
-// }
-
-// .navbar-profile:hover .navbar-profile-dropdown {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 10px;
-// }
-
-// .navbar-profile hr {
-//     background-color: gray;
-//     height: 1px;
-//     border: none;
-// }
-
-// /* Responsive Design */
-// @media (max-width: 1050px) {
-//     .navbar .logo {
-//         width: 140px;
-//     }
-
-//     .navbar-menu {
-//         gap: 20px;
-//         font-size: 17px;
-//     }
-
-//     .navbar-right {
-//         gap: 30px;
-//     }
-
-//     .navbar-right img {
-//         width: 22px;
-//     }
-
-//     .navbar-right button {
-//         padding: 8px 25px;
-//     }
-
-//     .navbar-search input {
-//         width: 120px;
-//     }
-// }
-
-// @media (max-width: 900px) {
-//     .navbar .logo {
-//         width: 120px;
-//     }
-
-//     .navbar-menu {
-//         gap: 15px;
-//         font-size: 16px;
-//     }
-
-//     .navbar-right {
-//         gap: 20px;
-//     }
-
-//     .navbar-right img {
-//         width: 20px;
-//     }
-
-//     .navbar-right button {
-//         font-size: 15px;
-//         padding: 7px 20px;
-//     }
-
-//     .navbar-search input {
-//         width: 100px;
-//     }
-// }
-
-// @media (max-width: 750px) {
-//     .navbar-menu {
-//         display: none;
-//     }
-
-//     .navbar-search input {
-//         width: 80px;
-//         font-size: 14px;
-//     }
-// }  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 * {
     margin: 0;
-    // padding: 0;
-    // box-sizing: border-box;
   }
   
   .navbar {
@@ -265,105 +19,111 @@
     z-index: 1000;
     padding: 0 20px;
   }
-    .logo {
-      width: 140px;
-      height: auto;
-      transition: transform 0.3s ease-in-out;
-      border-radius: 50px;}
-
-    //   &:hover {
-    //     transform: scale(1.05);
-    //   }
-    .navbar-menu {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-      font-size: 20px;
-      font-weight: 600;
   
-      a {
-        text-decoration: none;
-        color: white;
-        transition: color 0.3s;
+  .logo {
+    width: 140px;
+    height: auto;
+    border-radius: 50px;
+    padding-left: 0;
+    transition: transform 0.5s ease-in-out;
+    
+        
+    
   
-        &:hover {
-          color: #f9d507;
-        }
-      }
+    &:hover {
+      transform: rotate(360deg); // Hover par pura ghoom jayega
+    }
+  }
   
-      .active {
-        color: #FFD700;
-        border-bottom: 2px solid #FFD700;
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: 600;
+  
+    a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #f9d507;
       }
     }
   
-    .navbar-right {
+    .active {
+      color: #FFD700;
+      border-bottom: 2px solid #FFD700;
+    }
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  
+    .navbar-search {
       display: flex;
       align-items: center;
-      gap: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 15px;
+      border-radius: 50px;
+      box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
   
-      .navbar-search {
-        display: flex;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.2);
-        padding: 8px 15px;
-        border-radius: 50px;
-        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
-  
-        input {
-          border: none;
-          outline: none;
-          font-size: 16px;
-          background: transparent;
-          color: white;
-          width: 150px;
-  
-          &::placeholder {
-            color: #FFD700;
-          }
-        }
-  
-        img {
-          width: 20px;
-          cursor: pointer;
-        }
-      }
-  
-      .navbar-cart {
-        position: relative;
-        img {
-          width: 30px;
-          cursor: pointer;
-        }
-  
-        .dot {
-          width: 10px;
-          height: 10px;
-          background: red;
-          border-radius: 50%;
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
-      }
-  
-      button {
-        background: white;
+      input {
+        border: none;
+        outline: none;
         font-size: 16px;
-        color: #FF4C24;
-        border: 2px solid white;
-        padding: 10px 25px;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: 0.3s;
+        background: transparent;
+        color: white;
+        width: 150px;
   
-        &:hover {
-          background: #FFD700;
-          color: #FF4C24;
+        &::placeholder {
+          color: #FFD700;
         }
+      }
+  
+      img {
+        width: 20px;
+        cursor: pointer;
       }
     }
   
+    .navbar-cart {
+      position: relative;
+      img {
+        width: 30px;
+        cursor: pointer;
+      }
+  
+      .dot {
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  
+    button {
+      background: white;
+      font-size: 16px;
+      color: #FF4C24;
+      border: 2px solid white;
+      padding: 10px 25px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+  
+      &:hover {
+        background: #FFD700;
+        color: #FF4C24;
+      }
+    }
+  }
   
   /* Responsive Design */
   @media (max-width: 900px) {
