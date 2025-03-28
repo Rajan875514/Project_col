@@ -1,3 +1,113 @@
+import React, { useState } from 'react';
+import './Navbar.scss';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import search_icon from '../assets/search_icon.png';
+import basket_icon from '../assets/basket_icon.png';
+
+const Navbar = () => {
+  const [menu, setMenu] = useState("home");
+
+  return (
+    <div className="navbar">
+      <img src={logo} alt="Logo" className="logo" />
+
+      <ul className="navbar-menu">
+        <li>
+          <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <a href="#explore-menu" onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>
+            Menu
+          </a>
+        </li>
+        <li>
+          <a href="#app-download" onClick={() => setMenu("mob-app")} className={menu === "mob-app" ? "active" : ""}>
+            Mobile App
+          </a>
+        </li>
+        <li>
+          <a href="#footer" onClick={() => setMenu("contact")} className={menu === "contact" ? "active" : ""}>
+            Contact Us
+          </a>
+        </li>
+      </ul>
+
+      <div className="navbar-right">
+        <div className="navbar-search">
+          <input type="text" placeholder="Search..." />
+          <img src={search_icon} alt="Search" />
+        </div>
+
+        <div className="navbar-cart">
+          <img src={basket_icon} alt="Cart" />
+          <div className="dot"></div>
+        </div>
+
+        <button>Sign In</button>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
+
+
+//======================================================================================================
+
+
+
+
+// import React, { useState } from 'react';
+// import './Navbar.scss';
+// import logo from '../assets/logo.png';
+//  import { Link } from 'react-router-dom'
+// import search_icon from '../assets/search_icon.png';
+// import basket_icon from '../assets/basket_icon.png';
+
+// const Navbar = () => {
+//   const [menu, setMenu] = useState("home");
+
+//   return (
+//     <div className="navbar">
+//       <img src={logo} alt="Logo" className="logo" />
+//       <ul className="navbar-menu">
+//       <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>Home</Link>         
+//       <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>Menu</a>
+//       <a href='#app-download' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>Mobile app</a>
+//       <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>Contact us</a>
+//      </ul>
+//       <div className="navbar-right">
+//         <img src={search_icon} alt="Search" />
+//         <div className="navbar-search-icon">
+//           <img src={basket_icon} alt="Cart" />
+//           <div className="dot"></div>
+//         </div>
+//         <button>Sign In</button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+//============================================================================================
+
+
+
+
 // import React, { useContext, useEffect, useState } from 'react'
 // import './Navbar.css'
 // import { assets } from '../../assets/assets'
@@ -48,82 +158,3 @@
 // }
 
 // export default Navbar
-
-
-
-
-
-
-//=========================================================================================
-
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// import './Navbar.scss'
-// import logo from '../assets/logo.png';
-// import search_icon from '../public/search_icon.png';
-// import basket_icon from '../public/basket_icon.png';
-
-// const Navbar = () => {
-//   const [menu, setMenu] = useState("home");
-
-//   return (
-//     <div className="navbar">
-//       <img src={logo} alt="Logo" className="logo" />
-//       <ul className="navbar-menu">
-//         <li className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>Home</li>
-//         <li className={menu === "menu" ? "active" : ""} onClick={() => setMenu("menu")}>Menu</li>
-//         <li className={menu === "track" ? "active" : ""} onClick={() => setMenu("track")}>Track</li>
-//         <li className={menu === "contact" ? "active" : ""} onClick={() => setMenu("contact")}>Contact Us</li>
-//       </ul>
-//       <div className="navbar-right">
-//         <img src={search_icon} alt="Search" />
-//         <div className="navbar-search-icon">
-//           <img src={basket_icon} alt="Cart" />
-//           <div className="dot"></div>
-//         </div>
-//         <button>Sign In</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-import React, { useState } from 'react';
-import './Navbar.scss';
-import logo from '../assets/logo.png';
-import search_icon from '../assets/search_icon.png';
-import basket_icon from '../assets/basket_icon.png';
-
-const Navbar = () => {
-  const [menu, setMenu] = useState("home");
-
-  return (
-    <div className="navbar">
-      <img src={logo} alt="Logo" className="logo" />
-      <ul className="navbar-menu">
-        <li className={menu === "home" ? "active" : ""} onClick={() => setMenu("home")}>Home</li>
-        <li className={menu === "menu" ? "active" : ""} onClick={() => setMenu("menu")}>Menu</li>
-        <li className={menu === "track" ? "active" : ""} onClick={() => setMenu("track")}>Track</li>
-        <li className={menu === "contact" ? "active" : ""} onClick={() => setMenu("contact")}>Contact Us</li>
-      </ul>
-      <div className="navbar-right">
-        <img src={search_icon} alt="Search" />
-        <div className="navbar-search-icon">
-          <img src={basket_icon} alt="Cart" />
-          <div className="dot"></div>
-        </div>
-        <button>Sign In</button>
-      </div>
-    </div>
-  );
-};
-
-export default Navbar;
