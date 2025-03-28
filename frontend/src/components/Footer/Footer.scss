@@ -1,0 +1,118 @@
+
+.footer {
+    color: #D9D9D9;
+    background: linear-gradient(135deg, #232323, #3a3a3a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 8vw 15px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;  // ✅ Added margin-top for spacing
+
+    // Footer Content
+    .footer-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 60px;
+        animation: fadeIn 1s ease-in-out;
+
+        &-left, &-center, &-right {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 12px;
+            animation: slideUp 0.8s ease-in-out;
+
+            h2 {
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+
+            ul li {
+                list-style: none;
+                margin-bottom: 6px;
+                cursor: pointer;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: #ff4c24;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        // Left Section
+        &-left {
+            p {
+                font-size: 13px;
+                line-height: 1.5;
+                color: #c0c0c0;
+            }
+
+            img {
+                width: 120px; // ✅ Smaller logo
+            }
+        }
+    }
+
+    // Social Icons - Reduced Size & Space
+    .footer-social-icons {
+        display: flex;
+        gap: 8px;
+
+        img {
+            width: 25px; // ✅ Smaller icons
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    // Divider
+    hr {
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        margin: 15px 0;
+    }
+
+    // Copyright Text
+    .footer-copyright {
+        font-size: 18px;
+        text-align: center;
+        color: #aaa;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    // Responsive Design
+    @media (max-width: 750px) {
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+
+            &-left, &-center, &-right {
+                align-items: center;
+            }
+        }
+    }
+}
+
+// Animations
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
