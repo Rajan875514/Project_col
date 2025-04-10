@@ -1,3 +1,10 @@
+
+
+
+//======================================================================================================
+
+
+
 import React, { useState } from 'react';
 import './Navbar.scss';
 import { Link } from 'react-router-dom';
@@ -8,13 +15,18 @@ import basket_icon from '../assets/basket_icon.png';
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
 
+  const handleHomeClick = () => {
+    setMenu("home");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="navbar">
       <img src={logo} alt="Logo" className="logo" />
-
+      
       <ul className="navbar-menu">
         <li>
-          <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
+          <Link to="/" onClick={handleHomeClick} className={menu === "home" ? "active" : ""}>
             Home
           </Link>
         </li>
@@ -33,8 +45,8 @@ const Navbar = () => {
             Contact Us
           </a>
         </li>
-      </ul>
-
+      </ul> 
+      
       <div className="navbar-right">
         <div className="navbar-search">
           <input type="text" placeholder="Search..." />
@@ -53,49 +65,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-//======================================================================================================
-
-
-
-
-// import React, { useState } from 'react';
-// import './Navbar.scss';
-// import logo from '../assets/logo.png';
-//  import { Link } from 'react-router-dom'
-// import search_icon from '../assets/search_icon.png';
-// import basket_icon from '../assets/basket_icon.png';
-
-// const Navbar = () => {
-//   const [menu, setMenu] = useState("home");
-
-//   return (
-//     <div className="navbar">
-//       <img src={logo} alt="Logo" className="logo" />
-//       <ul className="navbar-menu">
-//       <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>Home</Link>         
-//       <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>Menu</a>
-//       <a href='#app-download' onClick={() => setMenu("mob-app")} className={`${menu === "mob-app" ? "active" : ""}`}>Mobile app</a>
-//       <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>Contact us</a>
-//      </ul>
-//       <div className="navbar-right">
-//         <img src={search_icon} alt="Search" />
-//         <div className="navbar-search-icon">
-//           <img src={basket_icon} alt="Cart" />
-//           <div className="dot"></div>
-//         </div>
-//         <button>Sign In</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-
 
 
 
